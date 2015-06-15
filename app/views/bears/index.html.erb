@@ -1,0 +1,7 @@
+<h1>OMG!!! BEARS </h1>
+
+<% @bears.map do |bear|  %>
+  <div><a href="/bears/<%= bear.id %>"><%= bear.name %> <a/></div>
+<% end %>
+
+
