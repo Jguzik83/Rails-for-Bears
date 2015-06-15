@@ -1,0 +1,15 @@
+<!-- <form action="/bears" method="post">
+  <label for="bear[name]">Bear Name</label>
+  <input type="text" name="name" placeholder="Yogi"/>
+  <label for="bear[species]">Bear Species</label>
+  <input type="text" name="species" placeholder="Brown Bear"/>
+  <input type="submit" value="Submit"/>
+</form>
+ -->
+<%= form_for @bear do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :species %>
+<%= f.text_field :species %>
+<%= f.submit "Create Bear" %>
+<% end %>

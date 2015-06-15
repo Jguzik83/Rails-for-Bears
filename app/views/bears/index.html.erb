@@ -1,7 +1,9 @@
 <h1>OMG!!! BEARS </h1>
-
-<% @bears.map do |bear|  %>
-  <div><a href="/bears/<%= bear.id %>"><%= bear.name %> <a/></div>
+<% @bears.each do |bear| %>
+  <li>
+    <%= link_to 'Delete', bear, method: :delete, data: {confirm: 'Are you sure?'} %>
+    <%= link_to 'Update', edit_bear_path(bear) %>
+    <%= link_to bear.name, bear_url(bear) %>
+  </li>
 <% end %>
-
-
+<%= link_to 'Create New Bear', new_bear_path %>
