@@ -1,4 +1,3 @@
-<h1>OMG!!! BEARS </h1>
 <% @bears.each do |bear| %>
   <li>
     <%= link_to 'Delete', bear, method: :delete, data: {confirm: 'Are you sure?'} %>
